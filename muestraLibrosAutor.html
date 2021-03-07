@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <title>Consulta de Autor y sus libros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+<?php
+
+    @$mysqli = new mysqli("localhost", "javimdaw", "1234", "Libros");
+    if ($mysqli->connect_errno)
+   {
+        echo "Error de conexión: " . $mysqli->connect_error;
+        die ("Pruebe de nuevo mas tarde");
+   }
+    else
+   {
+        //trabajar con conexión
+        if (!$mysqli->set_charset ("utf8"))
+        {
+            echo "Error cargando urf8" . $mysqli->error;
+        }
+        else
+            printf ("Conjunto de caracteres actual: %s\n", $mysqli->character_set_name ();
+   }
+   
+   ?>
+        
+        
+        
+        
+        <h1>Muestra los datos del Autor y de sus libros</h1>
+        
+        <div>Muestra los datos del Autor y de sus libros</div>
+        
+        <table>
+            <thead>
+                <tr><th colspan="2">Listado del Autor</th></tr>
+                <tr><th>
+                
+            
+                
+                
+            </thead>
+        
+        
+        </table>
+            
+    </body>
+</html>
